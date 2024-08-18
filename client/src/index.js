@@ -11,7 +11,7 @@ const router=createBrowserRouter([
     element:<App />
   },
   {
-    path:"/auth/spotify",
+    path:"/auth",
     element:<AuthSpotify />
   }
 ])

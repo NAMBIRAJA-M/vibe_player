@@ -4,7 +4,7 @@ export default function AuthSpotify() {
 const [backend,setBackend]=React.useState(null);
 
 React.useEffect(()=>{
-     fetch("/api")
+     fetch("/auth/spotify")
     .then(response => response.json())
     .then(data => {setBackend(data)})
     
