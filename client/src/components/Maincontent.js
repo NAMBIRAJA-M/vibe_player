@@ -5,6 +5,7 @@ import Albums from "./Albums";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Profile from "./profile";
+import SearchBar from './SearchBar.js';
 /* import { useNavigate } from "react-router-dom"; */
 
 
@@ -16,8 +17,8 @@ function MainContent() {
 
 
   function handleLogIn() {
-    
-try {
+
+    try {
       window.location.href = 'http://localhost:4000/auth/spotify/login';
     } catch (e) {
       console.log("errors while routing", e)
@@ -56,9 +57,9 @@ try {
     }
 
   }, [])
-  function handleLogOut(){
+  function handleLogOut() {
     setUser(null);
-    console.log("logged out successfully",user)
+    console.log("logged out successfully", user)
     console.log("logged out successfully");
 
   }
@@ -69,10 +70,14 @@ try {
         <div className="navArea">
           <ArrowBackIosIcon className="navArrow" />
           <ArrowForwardIosIcon className="navArrow" />
+
+          <div className="search-section">
+            <SearchBar />
+          </div>
         </div>
 
 
-        {user ? <Profile user={user}  onLogOut={handleLogOut} /> :
+        {user ? <Profile user={user} onLogOut={handleLogOut} /> :
           <div className="authorize">
             <button className="loginbtn" onClick={handleLogIn} >Log in</button>
             <button className="loginbtn" onClick={handleSignUp} >Sign up</button>
