@@ -48,10 +48,19 @@
   align-items: center;
   padding: 0.2rem 2rem;
 }
-.loginbtn{
+.loginbtn,.signupbtn{
   border: none;
   font-weight: 500;
   font-size: 1rem;
+}
+.signupbtn{
+  background-color: transparent;
+  color:#7d7c7c;
+}
+
+.signupbtn:hover{
+  color: white;
+  font-size: 1.1rem;
 }
 
 .loginbtn{
@@ -61,8 +70,8 @@
 }
 .loginbtn:hover{
   background-color:#7d7c7c;
-  font-weight: 600;
-  font-size: 1.12rem;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 
@@ -154,6 +163,9 @@
   font-size: 0.8rem;
   color: #7d7c7c;
 }
+.role:hover {
+  text-decoration: underline;
+}
 
 
 
@@ -196,3 +208,7 @@
   margin-left: 2rem;
   
 }
+
+
+
+

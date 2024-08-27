@@ -5,34 +5,40 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
     const Albumdata = [
         {
           id: "1",
-          name: "A.R.Rahman",
-          image: "https://i.scdn.co/image/ab67616100005174b19af0ea736c6228d6eb539c",
+          name: "Rayaan",
+          image: "https://i.scdn.co/image/ab67616d00001e02c55687b6cdba45d13ff07c91",
+          artist:"A.R.Rahman",
         },
         {
           id: "2",
-          name: "Anirudh Ravichander",
-          image: "https://i.scdn.co/image/ab676161000051740f0be2054fe9594026a6b843",
+          name: "The Greatest Of All Time (GOAT)",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpsS0iLeqYzIlbPERt-et5YfxxNPC5uH7ijw&s",
+          artist:"Yuvan Shankar Raja",
         },
         {
           id: "3",
-          name: "Yuvan Shankar Raja",
-          image: "https://i.scdn.co/image/ab6761610000e5ebe60d7a790ebea50d205bda93",
+          name: "Vaazhai - Original Motion Picture Soundtrack",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQS-zhXlPJZS8ugweNpj5sB3m38sxzIocf4A&s",
+          artist:"Santhosh Narayanan",
         },
         {
           id: "4",
-          name: "Hiphop Thamizha",
+          name: "Soorarai Pottru (Original Motion Picture Soundtrack)",
           image:
-            "https://pbs.twimg.com/profile_images/1537036944726982656/9yxiDNYe_400x400.jpg",
+            "https://i.scdn.co/image/ab67616d00001e02f06fc429c88fd58835de00ec",
+            artist:"G.V.Prakash",
         },
         {
           id: "5",
-          name: "G.V.Prakash",
-          image: "https://i.scdn.co/image/ab6761610000e5eb0a5c692089af5c0f9cf839f3",
+          name: "Aavesham (Original Motion Picture Soundtrack)",
+          image: "https://i.scdn.co/image/ab67616d0000b2731d93bb16bf3025587d001f45",
+          artist:"Sushin Shyam",
         },
         {
           id: "6",
-          name: "Vijay Antony",
-          image: "https://i.scdn.co/image/ab6772690000c46c51320f1823e1b38521de23fd",
+          name: "Indian 2 (Original Motion Picture Soundtrack)",
+          image: "https://i.scdn.co/image/ab67616d0000b273605a640e7636ce440c8d9323",
+          artist:"Anirudh Ravichander",
         },
         /*   {
             name: "Santhosh Narayanan",
@@ -88,7 +94,7 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
                       ) : null}
       
                       <p className="name">{album.name}</p>
-                      <p className="role">Artist</p>
+                      <p className="role">{album.artist}</p>
                     </div>
                   </div>
                 </div>

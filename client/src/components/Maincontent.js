@@ -6,6 +6,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Profile from "./profile";
 import SearchBar from './SearchBar.js';
+import SignUp from "./pages/SignUp.js";
 /* import { useNavigate } from "react-router-dom"; */
 
 
@@ -17,19 +18,26 @@ function MainContent() {
 
 
   function handleLogIn() {
-
     try {
+      window.location.href = 'http://localhost:3000/login';
+    } catch (e) {
+      console.log("errors while routing", e)
+    }
+
+    /* try {
       window.location.href = 'http://localhost:4000/auth/spotify/login';
     } catch (e) {
       console.log("errors while routing", e)
-    }
+    } */
   }
   function handleSignUp() {
+
     try {
-      window.location.href = 'http://localhost:4000/auth/spotify/signup';
+      window.location.href = 'http://localhost:3000/signup';
     } catch (e) {
       console.log("errors while routing", e)
     }
+
   }
 
   React.useEffect(() => {
@@ -58,8 +66,7 @@ function MainContent() {
 
   }, [])
   function handleLogOut() {
-    setUser(null);
-    console.log("logged out successfully", user)
+    console.log("logged out successfully");
     console.log("logged out successfully");
 
   }
@@ -79,10 +86,11 @@ function MainContent() {
 
         {user ? <Profile user={user} onLogOut={handleLogOut} /> :
           <div className="authorize">
+            <button className="signupbtn" onClick={handleSignUp} >Sign up</button>
             <button className="loginbtn" onClick={handleLogIn} >Log in</button>
-            <button className="loginbtn" onClick={handleSignUp} >Sign up</button>
+            
           </div>}
-
+        {console.log(user, "from mainjs")}
 
 
       </div>
@@ -91,6 +99,8 @@ function MainContent() {
         <Albums />
         <Albums />
         <Albums />
+        <SignUp />
+
       </div>
     </div>
   );

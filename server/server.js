@@ -6,10 +6,6 @@ import cors from 'cors';
 import env from 'dotenv';
 import session from "express-session";
 
-
-
-
-
 const app=express();
 const port=4000;
 env.config();
@@ -21,20 +17,40 @@ app.use(
      saveUninitialized: true,
    })
  );
-
 app.use(cors({
-  origin: 'http://localhost:3000', // Your React app's URL
+  origin: 'http://localhost:3000', 
   credentials: true
 }));
-
+app.use(express.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
+/* local authentication */
+app.post("/login",(req,res)=>{
+  const { email, password } = req.body; 
+  /* console.log('Username:', email);
+  console.log('Password:', password); */
+
+});
+
+app.post("/signup",(req,res)=>{
+   // Destructure the request body
+   const { email, password, fName, confirmPassword } = req.body;
+
+   // Log the extracted values
+   console.log('Email:', email);
+   console.log('Password:', password);
+   console.log('Name:', fName);
+   console.log('Confirm Password:', confirmPassword);
+});
+
+/* SPOTIFY AUTHENTICATION */
 
 app.get('/auth/spotify/signup',
   passport.authenticate('spotify', {
     scope: ['user-read-email', 'user-read-private'],
-    state: 'signup' 
+    state: 'signup' ,
+    showDialog: true
   })
 );
 
@@ -77,8 +93,8 @@ app.get('/auth/spotify/signup',
       if (err) {
         console.log('Error destroying session:', err);
       }
-      res.clearCookie('connect.sid'); // clear the session cookie
-      res.redirect('http://localhost:3000/'); // Redirect to the home page or a login page
+      res.clearCookie('connect.sid');
+      res.redirect('http://localhost:3000/'); 
     });
   });
 });
