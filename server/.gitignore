@@ -1,9 +1,14 @@
 node_modules
+<<<<<<< HEAD:server/.gitignore
 
 .env
 
 server/.env
 
+=======
+.env
+
+>>>>>>> 1cb658bb577eb7b23ad23954d5459f7fe01ee3a2:.gitignore
 # Logs
 logs
 *.log
