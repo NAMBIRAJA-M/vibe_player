@@ -1,0 +1,2 @@
+## Mood-Based Music Player
+This project is a dynamic and personalized music player that adapts to the user's mood. Built with React.js for the frontend and Node.js with Express.js for the backend, the application allows users to enjoy a tailored music experience based on their current emotional state. The player intelligently curates playlists and tracks that resonate with the user's mood, providing an immersive and engaging experience.
