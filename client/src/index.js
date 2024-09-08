@@ -4,15 +4,20 @@ import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 
 import App from "./App";
-import AuthSpotify from "./AuthSpotify";
+import LoginPage from "./components/pages/LoginPage";
+import SignUp from "./components/pages/SignUp";
 const router=createBrowserRouter([
   {
     path:'/',
     element:<App />
   },
   {
-    path:"/auth/spotify",
-    element:<AuthSpotify />
+    path:"/login",
+    element:<LoginPage />
+  },
+  {
+    path:"/signup",
+    element:<SignUp />
   }
 ])
 const rootElement = document.getElementById("root");
